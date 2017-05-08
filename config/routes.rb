@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  get 'categories/index'
 
-  resources :categories
+  resources :categories do
+    resources :articles
+  end
 
   root 'welcome#index'
 
