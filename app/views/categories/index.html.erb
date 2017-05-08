@@ -1,2 +1,14 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<h1>Craigslist Jr</h1>
+
+
+<ul>
+  <% @categories.each do |cat| %>
+    <li><%= link_to cat.name, category_articles_path(cat.id) %></li>
+    <%= link_to 'Edit', edit_category_path(cat) %>
+    <%= link_to 'Delete', category_path(cat), method: :delete %>
+    <br>
+    <br>
+  <% end %>
+</ul>
+
+<%= link_to 'New Category', new_category_path %>
