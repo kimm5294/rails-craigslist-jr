@@ -1,5 +1,7 @@
 <h1>New Article Page</h1>
 
+<%= render 'articles/errors' %>
+
 <%= form_for :article, url: category_articles_path do |f| %>
   <p>
     <%= f.label :title %><br>

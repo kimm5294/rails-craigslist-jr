@@ -1,14 +1,6 @@
 <h1>Create New Category</h1>
 
-<% if @category.errors %>
-  <ul>
-    <% @category.errors.full_messages.each do |error| %>
-      <li><%= error %></li>
-    <% end %>
-  </ul>
-
-<% end %>
-
+<%= render 'categories/errors' %>
 
 
 <%= form_for :category, url: categories_path do |f| %>
