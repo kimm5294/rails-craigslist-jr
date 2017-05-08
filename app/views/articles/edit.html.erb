@@ -1,0 +1,21 @@
+<h1>Edit Page</h1>
+
+<%= render 'articles/errors' %>
+
+<%= form_for :article, url: category_article_path(@category, @article), method: :put do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to "#{@category.name} Home", category_articles_path(@category) %>
