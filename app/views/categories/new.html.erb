@@ -3,15 +3,6 @@
 <%= render 'categories/errors' %>
 
 
-<%= form_for :category, url: categories_path do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <%= f.submit %><br>
-  </p>
-<% end %>
+<%= render 'categories/form' %>
 
 <%= link_to 'Home', categories_path %>
